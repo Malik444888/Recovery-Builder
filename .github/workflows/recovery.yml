@@ -14,9 +14,9 @@ on:
 
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
-  DEVICE: mi8937
-  DT_LINK: https://github.com/kardebayan/twrp_device_xiaomi_mi8937-new.git
-  DT_PATH: device/xiaomi/mi8937
+  DEVICE: neo3t
+  DT_LINK: https://github.com/AdarshGrewal/android_device_realme_rmx3371.git
+  DT_PATH: device/Qualcomm/kona
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
@@ -59,10 +59,10 @@ jobs:
        - name: Release recovery image
          uses: softprops/action-gh-release@v1
          env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: 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
          with:
-          tag_name: v70
-          name: idk
-          files: | 
-            work/out/target/product/$DEVICE/recovery.img
+          tag_name: kona
+          name: recovery 
+          files: twrp
+            work/out/target/product/neo 3t/recovery.img
             
