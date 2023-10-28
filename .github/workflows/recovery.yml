@@ -13,10 +13,10 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
-  DEVICE: neo3t
-  DT_LINK: https://github.com/AdarshGrewal/android_device_realme_rmx3371.git
-  DT_PATH: device/Qualcomm/kona
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+  DEVICE: X688B
+  DT_LINK: https://github.com/NeonzDump/twrp_infinix_X688B
+  DT_PATH: device/infinix/X688B
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
@@ -64,5 +64,5 @@ jobs:
           tag_name: kona
           name: recovery 
           files: twrp
-            work/out/target/product/neo 3t/recovery.img
+            work/out/target/product/X688B/recovery.img
             
